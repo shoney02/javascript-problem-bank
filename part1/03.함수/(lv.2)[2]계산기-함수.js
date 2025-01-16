@@ -11,8 +11,9 @@
  * @returns {number} - 계산된 총 금액
  */
 
-function calcTotal(price, quantity) {
+function calcTotal(price, quantity = 1) {
   //Todo
+  return (price * quantity);
 }
 
 // export 를 수정하지 마세요.
