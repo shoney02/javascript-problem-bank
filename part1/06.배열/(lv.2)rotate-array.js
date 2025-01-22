@@ -9,6 +9,7 @@
  */
 function rotateArray(arr) {
   // TODO: 원본을 변경하지 않고, 마지막 요소를 맨 앞으로 이동한 새 배열을 반환
+  return [arr[arr.length - 1], ...arr.slice(0, -1)];
 }
 
 // export를 수정하지 마세요.
