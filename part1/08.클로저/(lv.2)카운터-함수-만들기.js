@@ -12,6 +12,18 @@
  */
 function createCounter() {
   let count = 0;
+
+  return {
+    increase() {
+      count++;
+    },
+    decrease() {
+      count--;
+    },
+    currentValue() {
+      return count;
+    }
+  };
 }
 
 // export를 수정하지 마세요.
