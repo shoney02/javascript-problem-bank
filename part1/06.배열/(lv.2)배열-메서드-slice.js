@@ -14,7 +14,7 @@
  */
 function subArray(arr, start, end) {
   // TODO
-  return arr.splice(start, end);
+  return arr.slice(start, end);
 }
 
 // export를 수정하지 마세요.
