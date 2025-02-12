@@ -17,11 +17,22 @@ let topKeywordsCache = [];
 
 function updateTopKeywords(keywords) {
   // TODO
+  // 키워드 등장 횟수 계산
+  const keywordCount = {};
+  keywords.forEach((keyword) => {
+    keywordCount[keyword] = (keywordCount[keyword] || 0) + 1;
+  });
+
+  // 빈도수 기준 내림차순 정렬 후 상위 10개 키워드 저장
+  topKeywordsCache = Object.entries(keywordCount)
+    .sort((a, b) => b[1] - a[1]) // 빈도 내림차순 정렬
+    .map((entry) => entry[0]) // 키워드만 추출
+    .slice(0, 10); // 상위 10개 선택
 }
 
 function getTopKeywords() {
   // TODO
-  return [];
+  return topKeywordsCache;
 }
 
 // export를 수정하지 마세요.
